@@ -1,0 +1,10 @@
+
+set term jpeg
+
+set out 'min_drzewo_rozpinajace.jpg'
+
+plot 'sp_tree.dat' using 1:2       with lines lc rgb "black" lw 2 notitle,\
+  'sp_tree.dat' using 1:2:(0.3) with circles fill solid border lc rgb "black" lw 2 notitle,\
+  'sp_tree.dat' using 1:2:3     with labels tc rgb "white" offset (0,0) font 'Arial Bold' notitle,\
+  'edges_tree.dat' using 1:2:(0.2) with circles lt 3 fs solid 0.5 notitle,\
+  'edges_tree.dat' using 1:2:3     with labels tc rgb "black" offset (0,0) font 'Arial Bold' notitle,
